@@ -1,12 +1,5 @@
-let btn = document.getElementById('btnRate');
-        let output = document.getElementById('output');
-
+let btn = document.getElementById('btnCount');
         btn.addEventListener('click', () => {
-            let rates = document.getElementsByName('rate');
-            rates.forEach((rate) => {
-                if (rate.checked) {
-                    output.innerText = `You selected: ${rate.value}`;
-                }
-            });
-
+            let headings = document.getElementsByTagName('h2');
+            alert(`The number of H2 tags: ${headings.length}`);
         });
