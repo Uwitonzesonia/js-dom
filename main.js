@@ -1,5 +1,6 @@
-let btn = document.getElementById('btnCount');
-        btn.addEventListener('click', () => {
-            let headings = document.getElementsByTagName('h2');
-            alert(`The number of H2 tags: ${headings.length}`);
-        });
+let menu = document.getElementById('menu');
+let items = menu.getElementsByClassName('item');
+console.log(items);
+
+let data = [].map.call(items, (item) => item.textContent);
+console.log(data);
