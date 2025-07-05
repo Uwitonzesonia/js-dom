@@ -1,2 +1,2 @@
-let notes = document.querySelector(".note");
-console.log(notes);
+let parent = document.querySelector(".title");
+console.log("Parent.firstelementchild")
