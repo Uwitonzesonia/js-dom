@@ -5,8 +5,19 @@
 <title>JavaScript parentNode</title>
 </head>
 <body>
+    <ul id = "menu">
+        <li>home</li>
+        <li>about</li>
+        <li>blog</li>
+        <li>project</li>
+    </ul>
   
 
-<script src ="main.js"></script>
+<script >
+    let menu = document.getElementById("menu");
+    let List = document.createElement("li");
+    List.innerHTML="contact";
+    menu.appendchild(List)
+</script>
 </body>
 </html>
