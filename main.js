@@ -1,2 +1,2 @@
-let parent = document.querySelector(".title");
-console.log("Parent.childNodes")
+let second = document.querySelector(".second");
+console.log("second.previousElementSibling");
