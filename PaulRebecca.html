@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paul & Rebecca Wedding Invitation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.top-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.top-nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero {
+  height: 100vh;
+  background: url('images/background.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero h1, .hero p, .hero-photo {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-top: 30px;
+}
+
+.story-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #fafafa;
+}
+
+.story-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.story-photo img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.venue-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.venue-section iframe {
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rsvp-section {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.rsvp-section button {
+  padding: 15px 30px;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.rsvp-section .contact-numbers p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-section {
+    flex-direction: column;
+  }
+  .story-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+#hero-countdown {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="#couple">Couple</a>
+    <a href="#venue">Venue</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay"></div>
+    <img src="images/couple.jpg" alt="Paul and Rebecca" class="hero-photo" />
+    <h1>PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
+    <p>January 4, 2026</p>
+    <!-- COUNTDOWN TIMER HERE -->
+  <div id="hero-countdown">
+    <span id="days">00</span> Days
+    <span id="hours">00</span> Hours
+    <span id="minutes">00</span> Minutes
+    <span id="seconds">00</span> Seconds
+  </div>
+  </header>
+
+  <section id="couple" class="story-section">
+    <div class="story-text">
+      <h2>Our Story</h2>
+      <p>Paul: “From the moment I met Rebecca...”</p>
+      <p>Rebecca: “He made me laugh like no one else...”</p>
+    </div>
+    <div class="story-photo">
+      <img src="images/story.jpg" alt="Story Photo">
+    </div>
+  </section>
+
+  <section id="venue" class="venue-section">
+    <h2>Venue</h2>
+    <iframe src="https://maps.google.com/maps?q=Kigali,%20Rwanda&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+    <ul class="event-list">
+      <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
+      <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
+      <li><strong>Reception:</strong> 4:00 PM</li>
+    </ul>
+  </section>
+
+  <section id="rsvp" class="rsvp-section">
+    <h2>RSVP by December 31, 2025</h2>
+    <button onclick="location.href='tel:+250785383662'">Call to RSVP</button>
+    <div class="contact-numbers">
+      <p>+250 785383662</p>
+      <p>+250 7</p>
+    </div>
+  </section>
+  <script>
+const targetDate = new Date("January4, 2026 00:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+
+  if (diff < 0) return;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+</script>
+
+
+</body>
+</html>
+
+
