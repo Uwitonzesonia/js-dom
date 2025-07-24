@@ -99,6 +99,9 @@ body {
   padding: 60px 20px;
   background: #fff;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .venue-section iframe {
@@ -106,6 +109,32 @@ body {
   height: 300px;
   margin: 20px 0;
   border-radius: 8px;
+}
+.venue {
+  border: 2px solid salmon;
+  padding: 60px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+
+.venue-side {
+  row-gap: 40px;
+  width: 30%;
+}
+.venue-side-1 {
+  border: 2px solid salmon;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+.venue-side-2 {
+  border: 2px solid salmon;
+  padding: 40px;
+}
+.venue button {
+  padding: 15px;
+  background-color: gray;
+  border: 1px solid #000;
 }
 
 .event-list {
@@ -190,20 +219,33 @@ body {
       <img src="images/story.jpg" alt="Story Photo">
     </div>
   </section>
-
-  <section id="venue" class="venue-section">
-    <h2>Venue</h2>
-    <ul class="event-list">
-      <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
-      <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
-      <li><strong>Reception:</strong> 4:00 PM</li>
-    </ul>
-    <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View in Google Maps</button></a>
+<!-- Venue Section -->
+<section id="venue" class="venue-section">
+  <div class="venue">
+      <h2>Madeleine Garden</h2>
+      <p>KG 9 Ave, Kigali, Rwanda</p>
+      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View in Google Maps</button></a>
+    </div>
+    <div class="venue-side">
+      <div class="venue-side-1">
+        <h2>Avenue</h2>
+      <ul class="event-list">
+        <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
+        <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
+        <li><strong>Reception:</strong> 4:00 PM</li>
+      </ul>
+      </div>
+      <div class="venue-side-2">
+        <h2>Reception</h2>
+        <p>Following the church ceremony, please join us for dinner, dancing, and celebration.</p>
+        <span>Cocktail hour begins at 5:00 PM, with dinner served at 6:30 PM.</span>
+      </div>
+    </div>
   </section>
 
   <section id="rsvp" class="rsvp-section">
     <h2>RSVP by December 31, 2025</h2>
-    <button onclick="">Call to RSVP</button>
+    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button onclick="">Call to RSVP</button></a>
     <div class="contact-numbers">
       <p>+250 785383662</p>
       <p>+250 7</p>
