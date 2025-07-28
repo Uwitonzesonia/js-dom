@@ -265,25 +265,28 @@ body {
   display: flex;
   text-align: center;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+}
 
 
 </style>
 </head>
 <body>
   <header class="hero">
-
-    <video autoplay loop muted plays-inline>
-      <source src="images/paulreb.mp4" type="video/mp4">
-    </video>
   <nav class="top-nav">
     <a href="#couple">Couple</a>
     <a href="#venue">Venue</a>
     <a href="#gallery">Gallery</a>
     <a href="#rsvp">RSVP</a>
   </nav>
-
-
-    <div class="overlay"></div>
+   <div class="overlay"></div>
     <img src="images/couple.jpg" alt="Paul and Rebecca" class="hero-photo" />
     <h1>PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
     <p>January 4, 2026</p>
@@ -296,8 +299,14 @@ body {
      
     
   </div>
-  </header>
-  <div class="outer-link">
+  </header> 
+  <video autoplay loop muted plays-inline>
+
+     <source src="images/paulreb.mp4" type="video/mp4">
+
+    </video>
+ 
+<div class="outer-link">
   <a href="#couple" class="discover-button">View our story</a>
   </div>
   </section>
