@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  color: black;
   line-height: 1.6;
 }
 
@@ -22,7 +22,9 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
+  color: black;
+  border: #e74c3c 2px solid;
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -32,7 +34,9 @@ body {
 .top-nav a {
   margin: 0 20px;
   text-decoration: none;
-  color: #333;
+  color: white ;
+  background-color: black ;
+  border: #e74c3c 2px solid;
   font-weight: bold;
 }
 
@@ -50,7 +54,8 @@ body {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: black;
+  color: white;
   z-index: 1;
 }
 
@@ -76,6 +81,12 @@ body {
   border: 4px solid #fff;
   margin-top: 30px;
 }
+.title{
+  font-size: 15px;
+  color : black;
+  text-align: center;
+  margin-top: 20px;
+}
 
 .story-section {
   display: flex;
@@ -90,14 +101,18 @@ body {
 }
 
 .story-photo img {
-  max-width: 100%;
+  max-width: 40%;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   text-align: right;
+  margin-top: 60px;
+  border:#e74c3c 2px solid;
+
 }
 
 .venue-section {
   padding: 60px 20px;
-  background: #fff;
+  background: black;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -113,44 +128,56 @@ body {
 .venue {
   border: 2px solid salmon;
   padding: 60px;
+  color: #fafafa;
 }
 .venue h2 {
   margin-top: 50%;
+  color: #fafafa;
 }
 .venue-side {
   row-gap: 40px;
   width: 30%;
+  color: #fafafa;
 }
 .venue-side-1 {
   border: 2px solid salmon;
   padding: 40px;
   margin-bottom: 40px;
+  color: #fafafa;
+  text-decoration:rgba(255, 255, 255, 0.9);
 }
 .venue-side-2 {
   border: 2px solid salmon;
   padding: 40px;
+  color: #fafafa;
+  text-decoration: rgba(255, 255, 255, 0.9);
 }
 .venue button {
   padding: 15px;
   background-color: gray;
   border: 1px solid #000;
+  color: #fafafa;
+  text-decoration: rgba(255, 255, 255, 0.9);
 }
 
 .event-list {
   list-style: none;
   padding: 0;
+  color: #fafafa;
 }
 
 .rsvp-section {
   padding: 60px 20px;
-  background: #f5f5f5;
+  background: black;
   text-align: center;
+  color: #fafafa;
+   border: 2px solid salmon;
 }
 
 .rsvp-section button {
   padding: 15px 30px;
-  background: #333;
-  color: #fff;
+  background:salmon ;
+  color: #680404;
   border: none;
   font-size: 1em;
   cursor: pointer;
@@ -159,6 +186,7 @@ body {
 
 .rsvp-section .contact-numbers p {
   margin: 5px 0;
+  color: #fafafa;
 }
 
 /* Responsive */
@@ -178,10 +206,66 @@ body {
   color: #fff;
   font-size: 1.5em;
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
+  background:rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
   border-radius: 8px;
 }
+.story-section {
+ display: flex;
+ flex-wrap: wrap;
+ padding: 60px 20px;
+ background: black;
+ color: white;
+ border: #e74c3c 2px solid;
+
+}
+.happy-couple-secton {
+    text-align: center;
+    margin: 300px;
+
+}
+.outer-link {
+ text-align: center;
+  margin-top: 3;
+  padding: 15px 30px;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+   border-radius: 30px;
+   border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+.happy-couple-text {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color:antiquewhite;
+}
+.footer {
+  background-color: black;
+  color: #fafafa;
+  text-align: center;
+
+}
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #000;
+  color: #fafafa;
+  border: #e74c3c 2px solid;
+  display: flex;
+  text-align: center;
+}
+
 
 </style>
 </head>
@@ -205,17 +289,30 @@ body {
     <span id="hours">00</span> Hours
     <span id="minutes">00</span> Minutes
     <span id="seconds">00</span> Seconds
+     
+    
   </div>
   </header>
+  <div class="outer-link">
+  <a href="#couple" class="discover-button">View our story</a>
+  </div>
+  </section>
+        <section id="couple" class="story-section">
+         <div class="story-container">
+          <h1 class="happy-couple-text">HAPPY COUPLE</h1>
+          
+          </div>
+        <div class="underline-with-heart">
+          <span class="line"></span>
+            <span class="heart">&hearts;</span>
+            
 
-  <section id="couple" class="story-section">
-    <div class="story-text">
       <h2>Our Story</h2>
       <p>Paul: “From the moment I met Rebecca...”</p>
       <p>Rebecca: “He made me laugh like no one else...”</p>
     </div>
     <div class="story-photo">
-      <img src="images/story.jpg" alt="Story Photo">
+      <img src="IMG_11.jpg" alt="Story Photo">
     </div>
   </section>
 <!-- Venue Section -->
@@ -242,19 +339,21 @@ body {
     </div>
   </section>
   <section id="Gallery" class="gallery-section">
-    <h2>Gallery</h2>
+    <h2>Gallery</h2> 
+    <p> A collection of our favorite moments together</p><br>
     <p>OUR JOURNEY TOGETHER</p>
     <div class="images">
+       <img src="img/IMG_4"alt"">
       
     </div>
     </section>
 
   <section id="rsvp" class="rsvp-section">
     <h2>RSVP by December 31, 2025</h2>
-    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button onclick="">Call to RSVP</button></a>
+    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button onclick=""> RSVP NOW</button></a>
     <div class="contact-numbers">
       <p>+250 785383662</p>
-      <p>+250 7</p>
+      <p>+250 785764577</p>
     </div>
   </section>
   <script>
@@ -278,7 +377,14 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
 </script>
+<div class="footer">
+ <h1> Paul & Rebecca . January 4 , 2026 . </h1>
+
+ <p> developed by sonia Uwitonze </p>
+
+</div>
 
 
 </body>
