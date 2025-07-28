@@ -42,7 +42,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: url('images/background.jpg') center/cover no-repeat;
+  /* background: url('images/background.jpg') center/cover no-repeat; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ body {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: black;
+  /* background: black; */
   color: white;
   z-index: 1;
 }
@@ -270,7 +270,11 @@ body {
 </style>
 </head>
 <body>
+  <header class="hero">
 
+    <video autoplay loop muted plays-inline>
+      <source src="images/paulreb.mp4" type="video/mp4">
+    </video>
   <nav class="top-nav">
     <a href="#couple">Couple</a>
     <a href="#venue">Venue</a>
@@ -278,7 +282,7 @@ body {
     <a href="#rsvp">RSVP</a>
   </nav>
 
-  <header class="hero">
+
     <div class="overlay"></div>
     <img src="images/couple.jpg" alt="Paul and Rebecca" class="hero-photo" />
     <h1>PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
