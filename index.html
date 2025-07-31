@@ -8,8 +8,9 @@
   <style>
   * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  font-family:sans-serif;
 }
 
 body {
@@ -274,12 +275,23 @@ body {
   background: #000;
   color: #fff;
 }
+.back-video {
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ z-index: -1; 
+}
 
 
 </style>
 </head>
 <body>
+
   <header class="hero">
+    <video autoplay loop muted plays-inline>
+      <source src="images/paulreb.mp4" type="video/mp4">
+      </video>
+
   <nav class="top-nav">
     <a href="#couple">Couple</a>
     <a href="#venue">Venue</a>
@@ -300,13 +312,8 @@ body {
     
   </div>
   </header> 
-  <video autoplay loop muted plays-inline>
 
-     <source src="images/paulreb.mp4" type="video/mp4">
-
-    </video>
- 
-<div class="outer-link">
+ <div class="outer-link">
   <a href="#couple" class="discover-button">View our story</a>
   </div>
   </section>
