@@ -1,4 +1,8 @@
-let scores = [75, 80, 95];
-for (const score of scores) {
-    console.log(score);
+function sum(...args) {
+    let total = 0;
+    for (const a of args) {
+        total += a;
+    }
+    return total;
 }
+sum(1, 2, 3);
