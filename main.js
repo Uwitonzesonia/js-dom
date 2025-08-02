@@ -1,8 +1,3 @@
-function sum(...args) {
-    let total = 0;
-    for (const a of args) {
-        total += a;
-    }
-    return total;
-}
-sum(1, 2, 3);
+const odd = [1,3,5];
+const combined = [...odd, 2,4,6];
+console.log(combined);
