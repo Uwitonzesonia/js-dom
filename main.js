@@ -1,3 +1,6 @@
-const odd = [1,3,5];
-const combined = [...odd, 2,4,6];
-console.log(combined);
+let scores = [80, 90, 70];
+
+for (let score of scores) {
+    score = score + 5;
+    console.log(score);
+}
