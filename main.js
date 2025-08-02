@@ -1,3 +1,4 @@
-for (let i = 0; i < 5; i++) {
-    setTimeout(() => console.log(i), 1000);
+let scores = [75, 80, 95];
+for (const score of scores) {
+    console.log(score);
 }
