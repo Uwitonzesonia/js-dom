@@ -1,7 +1,7 @@
-function getScores() {
-  return [70, 80, 90, 100];
-}
+      const person = { name: "Alice", age: 30 };
+    const { name, age } = person;
 
-let [x, y, ...args] = getScores();
+    console.log(name);
 
-console.log({ x, y, args });
+    const { name: personName, age: personAge } = person;
+    console.log(personName);
