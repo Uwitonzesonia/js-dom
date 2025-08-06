@@ -100,31 +100,31 @@ body {
   margin-top: 20px;
 }
 
-.story-section {
+.part-1, .part-2 {
+  /* flex: 1 1 400px; */
   display: flex;
-  flex-wrap: wrap;
-  padding: 60px 20px;
-  background: #fafafa;
-}
-
-.story-text {
-  flex: 1;
-  padding-right: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .story-photo img {
-  max-width: 40%;
+  max-width: 60%;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-   text-align: right;
-  margin-top: 60px;
-  border:#e74c3c 2px solid;
+  /* text-align: right;  */
+  /* margin-top: 60px; */
+  border:#e74c3c 1px solid;
 
 }
-
+.part-1 {
+  max-width: 60%;
+  padding: 5rem;
+  border: 1px solid salmon;
+}
 .venue-section {
   padding: 60px 20px;
-  /* background: black; */
+  background: black;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -224,17 +224,23 @@ body {
 }
 .story-section {
  display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 3rem;
+ padding: 4rem 2rem;
+ min-height: 100vh;
  flex-wrap: wrap;
- padding: 60px 20px;
  background: black;
  color: white;
  border: #e74c3c 2px solid;
 
 }
-.happy-couple-secton {
-    text-align: center;
-    margin: 300px;
-
+.parts {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  align-items: center;
+  border: 1px solid red;
 }
 .outer-link {
  text-align: center;
@@ -250,6 +256,7 @@ body {
 
 }
 .happy-couple-text {
+   text-align: center;
   font-size: 1.8rem;
   color: white;
   margin-bottom: 40px;
@@ -332,6 +339,9 @@ body {
   .images-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for wider screens */
   }
+ion-icon {
+  color: orangered;
+}
 }
 
 
@@ -350,7 +360,7 @@ body {
   </nav>
    <div class="overlay"></div>
     <img src="images/pic.JPG" alt="Paul and Rebecca" class="hero-photo" />
-    <h1>PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
+    <h1 style="color: #e74c3c;">PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
     <p>January 4, 2026</p>
     <!-- COUNTDOWN TIMER HERE -->
   <div id="hero-countdown">
@@ -365,21 +375,25 @@ body {
 
  </section>
   <!-- Story section -->
-    <section id="couple" class="story-section">
-        <div class="story-container">
-          <h1 class="happy-couple-text">HAPPY COUPLE</h1>
+    <section class="story-section">
+      <div class="story-container">
+        <h1 class="happy-couple-text">HAPPY COUPLE</h1>
+      </div>
+      <div class="parts">
+        <div class="part-1">
+          <div class="underline-with-heart">
+            <ion-icon size="large" name="heart-sharp"></ion-icon>
+              
+            <h2>Our Story</h2>
+            <p> Our love story is very long. Just visit us and we will tell you. We know you'll enjoy hearing it and teach you.</p>
+          </div>
         </div>
-        <div class="underline-with-heart">
-          <span class="line"></span>
-          <span class="heart">&hearts;</span>
-            
-          <h2>Our Story</h2>
-          <p> Our love story is very long. Just visit us and we will tell you. We know you'll enjoy hearing it and teach you.</p>
-      
+        <div class="part-2">
+          <div class="story-photo">
+            <img src="./images/IMG_12.jpg" alt="Story Photo">
+          </div>
         </div>
-        <div class="story-photo">
-          <img src="IMG_11.jpg" alt="Story Photo">
-        </div>
+      </div>
     </section>
 <!-- Venue Section -->
 <section id="venue" class="venue-section">
@@ -455,6 +469,7 @@ body {
 
 <!-- SCRIPT Section -->
   <script>
+    
 const targetDate = new Date("January4, 2026 00:00:00").getTime();
 
 function updateCountdown() {
@@ -477,6 +492,8 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 
