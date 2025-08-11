@@ -44,7 +44,10 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url('./images/pic3.JPG'); 
+  background-image: url('./images/pic5.JPG');
+  background-position: 0% ;
+  background-attachment: fixed;
+
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -110,6 +113,7 @@ body {
 
 .story-photo img {
   max-width: 60%;
+
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   /* text-align: right;  */
@@ -122,16 +126,42 @@ body {
   padding: 5rem;
   border: 1px solid salmon;
 }
+
+.venue-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .venue-section {
   padding: 60px 20px;
   background: black;
   text-align: center;
+  color: white ;
   display: flex;
   justify-content: center;
   gap: 40px;
+  background-image: url('./images/pic5.JPG');
+    position:relative;
+  height: 100vh;
+  background-position: 4% ;
+  background-attachment: fixed;
+  
+
+ 
+
 }
 
+
 .venue-section iframe {
+    margin: 0 20px;
+  text-decoration: none;
+  color: white ;
+   
+
   width: 100%;
   height: 300px;
   margin: 20px 0;
@@ -140,11 +170,13 @@ body {
 .venue {
   border: 2px solid salmon;
   padding: 60px;
-  color: #fafafa;
+  color: white;
+  text-align: right;
+
 }
 .venue h2 {
   margin-top: 50%;
-  color: #fafafa;
+  color: white
 }
 .venue-side {
   row-gap: 40px;
@@ -157,12 +189,14 @@ body {
   margin-bottom: 40px;
   color: #fafafa;
   text-decoration:rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 .venue-side-2 {
   border: 2px solid salmon;
   padding: 40px;
   color: #fafafa;
   text-decoration: rgba(255, 255, 255, 0.9);
+  text-align: left;
 }
 .venue button {
   padding: 15px;
@@ -181,9 +215,30 @@ body {
 .rsvp-section {
   padding: 60px 20px;
   background: black;
-  text-align: center;
   color: #fafafa;
    border: 2px solid salmon;
+  position: relative;
+  height: 100vh;
+  background-image: url('./images/pic5.JPG');
+  background-position: 0% ;
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.rsvp-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .rsvp-section button {
@@ -229,11 +284,19 @@ body {
  gap: 3rem;
  padding: 4rem 2rem;
  min-height: 100vh;
- flex-wrap: wrap;
- background: black;
- color: white;
- border: #e74c3c 2px solid;
+ fl
+ 
+  
 
+}
+.story-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .parts {
   display: flex;
@@ -273,7 +336,29 @@ body {
   background-color: black;
   color: #fafafa;
   text-align: center;
+   position: relative;
+  height: 100vh;
+  background-image: url('./images/pic5.JPG');
+  background-position: 0% ;
+  background-attachment: fixed;
 
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .gallery {
   padding: 60px 20px;
@@ -282,6 +367,21 @@ body {
   border: #e74c3c 2px solid;
   /* display: flex */
   text-align: center;
+  background-image: url('./images/Pic5.jpg');
+   position: relative;
+  height: 100vh;
+   background-position: 0% ;
+  background-attachment: fixed;
+
+}
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .overlay {
   position: absolute;
@@ -302,9 +402,10 @@ body {
 .gallery-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
   align-items: flex-start;
+ 
 }
 
 .video-wrapper {
@@ -312,30 +413,34 @@ body {
   aspect-ratio: 16 / 9;
 }
 
+
 .video-wrapper video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
 }
 
 .images-grid {
-  flex: 2 1 600px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+   display: flex;
+      justify-content: space-between; /* Pushes items to left, center, right */
+      align-items: center;            /* Vertically center the images if needed */
+      max-width: 1000px;
+      margin: 0 auto;                 /* Center the whole container */
+      padding: 20px;
 }
 
 .images-grid img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 36%;                     /* Adjust as needed */
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;             /* Optional: adds rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 100px) {
   .images-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for wider screens */
   }
@@ -343,6 +448,7 @@ ion-icon {
   color: orangered;
 }
 }
+
 
 
 </style>
@@ -359,24 +465,29 @@ ion-icon {
     <a href="#rsvp">RSVP</a>
   </nav>
    <div class="overlay"></div>
-    <img src="images/pic.JPG" alt="Paul and Rebecca" class="hero-photo" />
-    <h1 style="color: #e74c3c;">PAUL & REBECCA<br>ARE GETTING MARRIED</h1>
+    <img src="images/pic.JPG" alt="Rebecca and Paul" class="hero-photo" />
+    <h1 style="color: #e74c3c;">REBECCA & PAUL<br>ARE GETTING MARRIED</h1>
     <p>January 4, 2026</p>
     <!-- COUNTDOWN TIMER HERE -->
   <div id="hero-countdown">
-    <span id="days">00</span> Days
-    <span id="hours">00</span> Hours
-    <span id="minutes">00</span> Minutes
-    <span id="seconds">00</span> Seconds
+    <span id="DAYS">00</span> DAYS
+    <span id="HOURS">00</span> HOURS
+    <span id="MINUTES">00</span> MINUTES
+    <span id="SECONDS">00</span> SECONDS
      
     
   </div>
-  </header> 
+  </header>
+  
 
- </section>
-  <!-- Story section -->
-    <section class="story-section">
-      <div class="story-container">
+ 
+  
+
+    <header class="story-section">
+ 
+       <!-- Story section -->
+
+    <div class="story-container">
         <h1 class="happy-couple-text">HAPPY COUPLE</h1>
       </div>
       <div class="parts">
@@ -390,13 +501,17 @@ ion-icon {
         </div>
         <div class="part-2">
           <div class="story-photo">
-            <img src="./images/IMG_12.jpg" alt="Story Photo">
+            <img src="images/image 13.jpg" alt="Story Photo">
           </div>
         </div>
       </div>
-    </section>
-<!-- Venue Section -->
-<section id="venue" class="venue-section">
+    </header>
+  
+
+<header class="venue-section">
+
+  <!-- Venue Section -->
+  
   <div class="venue">
       <h2>Madeleine Garden</h2>
       <p>KG 9 Ave, Kigali, Rwanda</p>
@@ -417,55 +532,60 @@ ion-icon {
         <span>Cocktail hour begins at 5:00 PM, with dinner served at 6:30 PM.</span>
       </div>
     </div>
-  </section>
-<!-- RSVP section -->
-  <section id="rsvp" class="rsvp-section">
-    <h2>RSVP by December 31, 2025</h2>
-    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button onclick="">Register now if you attend </button></a>
+</header>
+
+
+  <header class="rsvp-section">
+
+    <!-- RSVP section -->
+
+    <h2>Register end by December 31, 2025</h2>
+    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button onclick="">Register if you will attend </button></a>
     <div class="contact-numbers">
       <p>+250 785383662</p>
       <p>+250 785764577</p>
     </div>
-  </section>
+  </header>
+ 
  
 
-  <!-- Gallery section -->
-  <section id="Gallery" class="gallery">
+
+  <header class="gallery">
+
+      <!-- Gallery section -->
     <h2>Gallery</h2> 
     <p> A collection of our favorite moments together</p><br>
     <p>OUR JOURNEY TOGETHER</p>
     <!-- images in gallery -->
     <div class="gallery-section">
     <div class="images-grid">
-    <img src="images/pic3.JPG" alt="Wedding photo 3">
-    <img src="images/pic4.JPG" alt="Wedding photo 3">
-    <img src="images/pic.JPG" alt="Wedding photo 1">
-    <img src="images/pic2.JPG" alt="Wedding photo 2">
+    <img src="images/image4.jpg" alt="Wedding photo 3">
+    <img src="images/IMGL0918.jpg"alt="Wedding photo 3">
+    <img src="images/pic6.jpg"alt="Weddinging photo 3">
     
     <!-- Add more as needed -->
   </div>
 </div>
- <div class="video-wrapper">
+ 
+  </header>
+
+  <div class="video-wrapper">
     <video autoplay loop muted plays-inline>
       <source src="images/paulreb.mp4" type="video/mp4">
       <!-- Your browser does not support the video tag. -->
     </video>
-  </div>
+    </div>
 
 
       
-    </div>
-    </section>
-  <!-- <video autoplay loop muted plays-inline>
-    <source src="images/paulreb.mp4" type="video/mp4">
-  </video> -->
-      <!-- Footer Section -->
-<div class="footer">
- <h1> Paul & Rebecca . January 4 , 2026 . </h1>
+    
+    <header class="footer">
+
+ <h1> Rebecca & Paul . January 4 , 2026 . </h1>
 
  <p> developed by sonia Uwitonze </p>
 
-</div>
+</header>
 
 <!-- SCRIPT Section -->
   <script>
@@ -478,15 +598,15 @@ function updateCountdown() {
 
   if (diff < 0) return;
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  const DAYS = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const HOURS = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const MINUTES = Math.floor((diff / (1000 * 60)) % 60);
+  const SECONDS = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
+  document.getElementById("DAYS").textContent = DAYS;
+  document.getElementById("HOURS").textContent = HOURS;
+  document.getElementById("MINUTES").textContent = MINUTES;
+  document.getElementById("SECONDS").textContent = SECONDS;
 }
 
 setInterval(updateCountdown, 1000);
@@ -494,6 +614,7 @@ setInterval(updateCountdown, 1000);
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
 
