@@ -1,208 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rebecca & Paul Wedding</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="images/ring.jpg" type="image/x-icon">  
-  <!-- Ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebecca & Paul Wedding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/ring.jpg" type="image/x-icon" />
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: white;
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-    a { text-decoration: none; color: white; }
-    img { max-width: 100%; display: block; }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #000;
+        color: white;
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-    /* Floating Hearts */
-    .heart {
-      position: absolute;
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-      color: red;
-      z-index: 0;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-    }
-.top-nav {
-      position: fixed; 
-      top: 0; 
-      width: 100%;
-      /* background: rgba(0,0,0,0.7);  */
-      display: flex;
-      justify-content: center; 
-      padding: 15px 0; z-index: 1000;
-    }
-    .top-nav a {
-      margin: 0 20px; font-weight: 500;
-    }
+      /* Floating Hearts */
+      .heart {
+        position: absolute;
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+        color: red;
+        z-index: 0;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) scale(1.5);
+          opacity: 0;
+        }
+      }
+      .top-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        /* background: rgba(0,0,0,0.7);  */
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        z-index: 1000;
+      }
+      .top-nav a {
+        margin: 0 20px;
+        font-weight: 500;
+      }
 
-    /* Hero Section */
-    .hero {
-      background: url('images/pic5.JPG') center/cover fixed;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      padding: 100px 20px 40px;
-    }
-    .hero::before {
-      content: ""; position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7); z-index: 1;
-    }
-    .hero * { position: relative; z-index: 2; }
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #e74c3c;
-      margin-bottom: 20px;
-    }
+      /* Hero Section */
+      .hero {
+        background: url("images/pic5.JPG") center/cover fixed;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 100px 20px 40px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+      }
+      .hero * {
+        position: relative;
+        z-index: 2;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        color: #e74c3c;
+        margin-bottom: 20px;
+      }
 
-    /* Countdown Boxes */
-    #hero-countdown {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .count-box {
-      background: rgba(255,255,255,0.1);
-      padding: 15px 20px;
-      border-radius: 8px;
-      text-align: center;
-      min-width: 80px;
-    }
-    .count-box span {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #e74c3c;
-    }
-    .count-box small {
-      display: block;
-      font-size: 0.9rem;
-      color: #fff;
-    }
-    .styled-btn {
-      background-color: salmon;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    .styled-btn:hover {
-      background-color: #e06a6a;
-    }
+      /* Countdown Boxes */
+      #hero-countdown {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .count-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+        border-radius: 8px;
+        text-align: center;
+        min-width: 80px;
+      }
+      .count-box span {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #e74c3c;
+      }
+      .count-box small {
+        display: block;
+        font-size: 0.9rem;
+        color: #fff;
+      }
+      .styled-btn {
+        background-color: salmon;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+      .styled-btn:hover {
+        background-color: #e06a6a;
+      }
 
+      /* Section Title */
+      .section-title {
+        position: relative;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: white;
+      }
+      .section-title ion-icon {
+        display: block;
+        font-size: 2rem;
+        color: #e74c3c;
+        margin-bottom: 5px;
+      }
+      .section-title::after {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background: #e74c3c;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
-    /* Section Title */
-    .section-title {
-      position: relative; text-align: center;
-      font-size: 2.5rem; margin-bottom: 30px; color: white;
-    }
-    .section-title ion-icon {
-      display: block; font-size: 2rem; color: #e74c3c; margin-bottom: 5px;
-    }
-    .section-title::after {
-      content: ''; width: 80px; height: 2px;
-      background: #e74c3c; position: absolute; bottom: -10px;
-      left: 50%; transform: translateX(-50%);
-    }
+      /* Story */
+      .story-section {
+        background: url("images/pic5.JPG") center/cover fixed;
+        position: relative;
+        min-height: 100vh;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .story-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+      }
+      .story-section * {
+        position: relative;
+        z-index: 2;
+      }
+      .parts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+      .part {
+        flex: 1 1 300px;
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 8px;
+      }
 
-    /* Story */
-    .story-section {
-      background: url('images/pic5.JPG') center/cover fixed;
-      position: relative; min-height: 100vh;
-      padding: 4rem 2rem; display: flex;
-      flex-direction: column; justify-content: center; align-items: center; text-align: center;
-    }
-    .story-section::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1;
-    }
-    .story-section * { position: relative; z-index: 2; }
-    .parts {
-      display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;
-    }
-    .part { flex: 1 1 300px; max-width: 400px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; }
+      /* Gallery */
+      .gallery {
+        background: url("images/pic5.JPG") center/cover fixed;
+        position: relative;
+        padding: 60px 20px;
+        text-align: center;
+        min-height: 100vh;
+      }
+      .gallery::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      .gallery h2,
+      .gallery p {
+        position: relative;
+        z-index: 2;
+      }
+      .images-grid {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+      .image-overlay-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer;
+        flex: 1 1 30%;
+        max-width: 30%;
+      }
+      .image-overlay-wrapper img {
+        width: 100%;
+        transition: transform 0.3s ease;
+      }
+      .image-overlay-wrapper:hover img {
+        transform: scale(1.05);
+      }
+      .image-overlay-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        font-size: 1rem;
+        text-align: center;
+      }
 
-    /* Gallery */
-    .gallery {
-      background: url('images/pic5.JPG') center/cover fixed;
-      position: relative; padding: 60px 20px; text-align: center; min-height: 100vh;
-    }
-    .gallery::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;
-    }
-    .gallery h2, .gallery p { position: relative; z-index: 2; }
-    .images-grid {
-      display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;
-      margin-top: 2rem; position: relative; z-index: 2;
-    }
-    .image-overlay-wrapper {
-      position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; flex: 1 1 30%;
-      max-width: 30%;
-    }
-    .image-overlay-wrapper img {
-      width: 100%; transition: transform 0.3s ease;
-    }
-    .image-overlay-wrapper:hover img { transform: scale(1.05); }
-    .image-overlay-text {
-      position: absolute; bottom: 0; left: 0; width: 100%;
-      background: rgba(0,0,0,0.6); color: #fff;
-      padding: 10px; font-size: 1rem; text-align: center;
-    }
+      @media (max-width: 768px) {
+        .images-grid {
+          flex-direction: column;
+        }
+        .image-overlay-wrapper {
+          max-width: 100%;
+        }
+        .parts {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
 
-    @media (max-width: 768px) {
-      .images-grid { flex-direction: column; }
-      .image-overlay-wrapper { max-width: 100%; }
-      .parts { flex-direction: column; align-items: center; }
-    }
+      /* Venue Section */
+      .venue-section {
+        background: url("./images/pic5.JPG") center/cover fixed;
+        position: relative;
+        padding: 60px 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        height: 100vh;
+      }
+      .venue-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+      }
+      .venue-section * {
+        position: relative;
+        z-index: 2;
+      }
 
-    /* Venue Section */
-    .venue-section {
-      background: url('./images/pic5.JPG') center/cover fixed;
-      position: relative;
-      padding: 60px 20px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      height: 100vh;
-    }
-    .venue-section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-    .venue-section * { position: relative; z-index: 2; }
+      .venue {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+      .venue,
+      .venue-side-1,
+      .venue-side-2 {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 1px solid salmon;
+        padding: 40px;
+        border-radius: 10px;
+        flex: 1;
+      }
+      .venue h2,
+      .venue-side h2 {
+        color: white;
+        margin-bottom: 10px;
+      
+      }
+      .venue p,
+      .venue-side p,
+      .venue-side span {
+        color: #fafafa;
+      }
+      .venue-side {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+      }
+
 
     .venue, .venue-side-1, .venue-side-2 {
       background-color: rgba(0, 0, 0, 0.7);
@@ -221,202 +369,284 @@ g
       margin-top: 30px;
       flex: 1;
     }
+      .venue button {
+        padding: 12px 20px;
+        background-color: salmon;
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
 
-    .venue button {
-      padding: 12px 20px;
-      background-color: salmon;
-      color: white;
-      border: none;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
 
-    .event-list {
-      list-style: none;
-      padding: 0;
-      color: #fafafa;
-    }
+      .event-list {
+        list-style: none;
+        padding: 0;
+        color: #fafafa;
+      }
 
-    /* RSVP */
-    .rsvp-section {
-      background: url('images/pic5.JPG') center/cover fixed;
-      position: relative; padding: 60px 20px; text-align: center; min-height: 100vh;
-    }
-    .rsvp-section::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;
-    }
-    .rsvp-section * { position: relative; z-index: 2; }
-    .rsvp-section button {
-      background: salmon; padding: 12px 24px; border: none; color: white;
-      font-weight: bold; margin-top: 20px; cursor: pointer; font-size: 1rem;
-      border-radius: 5px;
-    }
+      /* RSVP */
+      .rsvp-section {
+        background: url("images/pic5.JPG") center/cover fixed;
+        position: relative;
+        padding: 60px 20px;
+        text-align: center;
+        min-height: 100vh;
+      }
+      .rsvp-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      .rsvp-section * {
+        position: relative;
+        z-index: 2;
+      }
+      .rsvp-section button {
+        background: salmon;
+        padding: 12px 24px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+      }
 
-    /* Video */
-    .video-wrapper {
-      margin: 40px auto; max-width: 900px;
-    }
-    .video-wrapper video {
-      width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
+      /* Video */
+      .video-wrapper {
+        margin: 40px auto;
+        max-width: 900px;
+      }
+      .video-wrapper video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
 
-    /* Footer */
-    .footer {
-      background: url('images/pic5.JPG') center/cover fixed;
-      position: relative; padding: 40px 20px; text-align: center;
-    }
-    .footer::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;
-    }
-    .footer * { position: relative; z-index: 2; }
-    .footer p { font-size: 0.9rem; opacity: 0.8; }
-  </style>
-</head>
+      /* Footer */
+      .footer {
+        background: url("images/pic5.JPG") center/cover fixed;
+        position: relative;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      .footer * {
+        position: relative;
+        z-index: 2;
+      }
+      .footer p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      ion-icon {
+        font-size: 64px;
+        color: #e06a6a;
+      }   
+    </style>
+  </head>
 
-<body>
+  <body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="#couple">Couple</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#venue">Venue</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
 
-  <!-- Navigation -->
-  <nav class="top-nav">
-    <a href="#couple">Couple</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#venue">Venue</a>
-    <a href="#rsvp">RSVP</a>
-  </nav>
+    <!-- Hero -->
+    <header class="hero">
+      <h1>B. REBECCA & H. PAUL</h1>
+      <p>ARE GETTING MARRIED</p>
+      <p>January 4, 2026</p>
+
+      <div id="hero-countdown">
+        <div class="count-box">
+          <span id="DAYS">00</span><small>DAYS</small>
+        </div>
+        <div class="count-box">
+          <span id="HOURS">00</span><small>HOURS</small>
+        </div>
+        <div class="count-box">
+          <span id="MINUTES">00</span><small>MINUTES</small>
+        </div>
+        <div class="count-box">
+          <span id="SECONDS">00</span><small>SECONDS</small>
+        </div>
+      </div>
+
 
   <!-- Hero -->
   <header class="hero">
     <h1>B.REBECCA & H.PAUL(Godwin)</h1>w
     <p>ARE GETTING MARRIED</p>
     <p>January 4, 2026</p>
+      <a href="#couple" target="_blank" class="styled-btn">
+        Discover our story
+      </a>
+    </header>
 
-    <div id="hero-countdown">
-      <div class="count-box"><span id="DAYS">00</span><small>DAYS</small></div>
-      <div class="count-box"><span id="HOURS">00</span><small>HOURS</small></div>
-      <div class="count-box"><span id="MINUTES">00</span><small>MINUTES</small></div>
-      <div class="count-box"><span id="SECONDS">00</span><small>SECONDS</small></div>
+
+    <!-- Couple -->
+    <section class="story-section" id="couple">
+      <h1 class="section-title">
+        <ion-icon name="heart-sharp"></ion-icon>HAPPY COUPLE
+      </h1>
+      <div class="parts">
+        <div class="part">
+          <h2 class="section-title">
+            <ion-icon name="heart-sharp"></ion-icon>Our Story
+          </h2>
+          <p>
+            Our love story is very long. Just visit us and we will tell you. We
+            know you'll enjoy hearing it and maybe you'll learn something from
+            it.
+          </p>
+        </div>
+        <div class="part">
+          <img src="images/image 13.jpg" alt="Story Photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+      <h2 class="section-title">
+        <ion-icon name="heart-sharp"></ion-icon>Our Journey Together
+      </h2>
+      <p>Here are some of our cherished moments:</p>
+      <div class="images-grid">
+        <div class="image-overlay-wrapper" onclick="alert('Radiant Beauty')">
+          <img src="images/image4.jpg" alt="Wedding photo 1" />
+          <div class="image-overlay-text">Radiant Beauty</div>
+        </div>
+        <div
+          class="image-overlay-wrapper"
+          onclick="alert('Dancing Through Life')"
+        >
+          <img src="images/IMGL0918.jpg" alt="Wedding photo 2" />
+          <div class="image-overlay-text">Dancing Through Life</div>
+        </div>
+        <div class="image-overlay-wrapper" onclick="alert('Always Love Wins')">
+          <img src="images/pic6.jpg" alt="Wedding photo 3" />
+          <div class="image-overlay-text">Always Love Wins</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="venue-section" id="venue">
+      <div class="venue">
+        <ion-icon name="location-outline"></ion-icon>
+        <h2>Madeleine Garden</h2>
+        <p>KG 9 Ave, Kigali, Rwanda</p>
+        <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"
+          ><button>View in Google Maps</button></a
+        >
+      </div>
+      <div class="venue-side">
+        <div class="venue-side-1">
+          <h2><u>Avenue</u></h2>
+          <ul class="event-list">
+            <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
+            <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
+            <li><strong>Reception:</strong> 5:00 PM</li>
+          </ul>
+        </div>
+        <div class="venue-side-2">
+          <h2><u>Reception</u> </h2>
+          <p>Please join us for dinner, dancing, and celebration.</p>
+          <span>Celebration evening 5:00 PM, with dinner served at 6:30 PM.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section" id="rsvp">
+      <h1 class="section-title">
+        <ion-icon name="heart-sharp"></ion-icon>We Can’t Wait to Celebrate With
+        You!
+      </h1>
+      <h4>Registering ends December 31, 2025</h4>
+      <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"
+        ><button>Register</button></a
+      >
+      <div class="contact-numbers">
+        <p>+250 785383662</p>
+        <p>+250 785764577</p>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <video autoplay loop muted playsinline>
+        <source src="images/paulreb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <a href="#couple" target="_blank" class="styled-btn"> Discover our story </a>
-  </header>
+    <!-- Footer -->
+    <footer class="footer">
+      <h1>Rebecca & Paul – January 4, 2026</h1>
+      <p>Developed by Sonia Uwitonze</p>
+    </footer>
 
-  <!-- Couple -->
-  <section class="story-section" id="couple">
-    <h1 class="section-title"><ion-icon name="heart-sharp"></ion-icon>HAPPY COUPLE</h1>
-    <div class="parts">
-      <div class="part">
-        <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Our Story</h2>
-        <p>Our love story is very long. Just visit us and we will tell you. We know you'll enjoy hearing it and maybe you'll learn something from it.</p>
-      </div>
-      <div class="part">
-        <img src="images/image 13.jpg" alt="Story Photo">
-      </div>
-    </div>
-  </section>
+    <!-- Countdown Script -->
+    <script>
+      const targetDate = new Date("January 4, 2026 00:00:00").getTime();
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+        if (diff < 0) return;
+        document.getElementById("DAYS").textContent = Math.floor(
+          diff / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById("HOURS").textContent = Math.floor(
+          (diff / (1000 * 60 * 60)) % 24
+        );
+        document.getElementById("MINUTES").textContent = Math.floor(
+          (diff / (1000 * 60)) % 60
+        );
+        document.getElementById("SECONDS").textContent = Math.floor(
+          (diff / 1000) % 60
+        );
+      }
+      setInterval(updateCountdown, 1000);
+    </script>
 
-  <!-- Gallery -->
-  <section class="gallery" id="gallery">
-    <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Our Journey Together</h2>
-    <p>Here are some of our cherished moments:</p>
-    <div class="images-grid">
-      <div class="image-overlay-wrapper" onclick="alert('Radiant Beauty')">
-        <img src="images/image4.jpg" alt="Wedding photo 1">
-        <div class="image-overlay-text">Radiant Beauty</div>
-      </div>
-      <div class="image-overlay-wrapper" onclick="alert('Dancing Through Life')">
-        <img src="images/IMGL0918.jpg" alt="Wedding photo 2">
-        <div class="image-overlay-text">Dancing Through Life</div>
-      </div>
-      <div class="image-overlay-wrapper" onclick="alert('Always Love Wins')">
-        <img src="images/pic6.jpg" alt="Wedding photo 3">
-        <div class="image-overlay-text">Always Love Wins</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Venue -->
-  <section class="venue-section" id="venue">
-    <div class="venue">
-      <h2>Madeleine Garden</h2>
-      <p>KG 9 Ave, Kigali, Rwanda</p>
-      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View in Google Maps</button></a>
-    </div>
-    <div class="venue-side">
-      <div class="venue-side-1">
-        <h2>Avenue</h2>
-        <ul class="event-list">
-          <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
-          <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
-          <li><strong>Reception:</strong> 4:00 PM</li>
-        </ul>
-      </div>
-      <div class="venue-side-2">
-        <h2>Reception</h2>
-        <p>Please join us for dinner, dancing, and celebration.</p>
-        <span>Celebration evening 4:00 , with dinner served at 6:30 PM.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- RSVP -->
-  <section class="rsvp-section" id="rsvp">
-    <h1 class="section-title"><ion-icon name="heart-sharp"></ion-icon>We Can’t Wait to Celebrate With You!</h1>
-    <h4>Registering ends December 31, 2025</h4>
-    <a href="https://forms.gle/NtEag7K9oTjkz7hW9" target="_blank"><button>Register</button></a>
-    <div class="contact-numbers">
-      <p>+250 785383662</p>
-      <p>+250 785764577</p>
-    </div>
-  </section>
-
-  <!-- Video -->
-  <div class="video-wrapper">
-    <video autoplay loop muted playsinline>
-      <source src="images/paulreb.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <h1>Rebecca & Paul – January 4, 2026</h1>
-    <p>Developed by Sonia Uwitonze</p>
-  </footer>
-
-  <!-- Countdown Script -->
-  <script>
-    const targetDate = new Date("January 4, 2026 00:00:00").getTime();
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-      if (diff < 0) return;
-      document.getElementById("DAYS").textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById("HOURS").textContent = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      document.getElementById("MINUTES").textContent = Math.floor((diff / (1000 * 60)) % 60);
-      document.getElementById("SECONDS").textContent = Math.floor((diff / 1000) % 60);
-    }
-    setInterval(updateCountdown, 1000);
-  </script>
-
-  <!-- Floating Heart Animation Script -->
-  <script>
-    const heartContainer = document.getElementById('heart-container');
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerText = '❤️';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = Math.random() * 10 + 10 + 'px';
-      heartContainer.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-    setInterval(createHeart, 300);
-  </script>
-
-</body>
+    <!-- Floating Heart Animation Script -->
+    <script>
+      const heartContainer = document.getElementById("heart-container");
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerText = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 10 + 10 + "px";
+        heartContainer.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+      setInterval(createHeart, 300);
+    </script>
+  </body>
 </html>
-
-
