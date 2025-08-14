@@ -162,35 +162,55 @@
       .image-overlay-wrapper { max-width: 100%; }
     }
 
-    /* Venue */
-    .venue-section {
-      background: url('images/pic5.JPG') center/cover fixed;
-      padding: 60px 20px;
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-      color: white;
-    }
-    .venue-section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-    .venue-section * { position: relative; z-index: 2; }
-    .venue, .venue-side {
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 2px solid salmon;
-      padding: 30px;
-      border-radius: 10px;
-      flex: 1;
-      min-width: 300px;
-    }
-    .event-list { list-style: none; padding: 0; }
+.venue-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.venue-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.venue-box {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.venue-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.venue-box a {
+  display: inline-block;
+  margin: 10px 0;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.venue-box a:hover {
+  text-decoration: underline;
+}
+
+.sub-event {
+  margin-top: 12px;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95em;
+}
+
 
     /* RSVP Section */
     .rsvp-section {
@@ -264,6 +284,8 @@
     </div>
   </section>
 
+
+
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <h2 class="section-title">Gallery</h2>
@@ -283,22 +305,32 @@
     </div>
   </section>
 
-  <!-- Venue Section -->
-  <section id="venue" class="venue-section">
-    <div class="venue">
-      <h2>Wedding Venue</h2>
-      <p>123 Dream Street, Wonderland</p>
-      <ul class="event-list">
-        <li><strong>Reception:</strong> 5:00 PM</li>
-        <li><strong>Ceremony:</strong> 6:30 PM</li>
-        <li><strong>After Party:</strong> 9:00 PM</li>
-      </ul>
+ <section id="venue" class="venue-section">
+  <h2>Venue</h2>
+  <div class="venue-grid">
+    <!-- Box 1: Madeleine Garden & Map + Dowry Giving -->
+    <div class="venue-box">
+      <h3>Madeleine Garden</h3>
+      <p>KG 9 Ave, Kigali, Rwanda</p>
+      <a class="map-link" href="https://maps.app.goo.gl" target="_blank" rel="noopener">View on Google Maps</a>
+      <p class="sub-event">Introduction &amp; Dowry Giving – 10:00 AM</p>
     </div>
-    <div class="venue-side">
-      <h2>Map</h2>
-      <a href="https://maps.google.com" target="_blank" class="styled-btn">Open in Google Maps</a>
+
+    <!-- Box 2: Church Ceremony -->
+    <div class="venue-box">
+      <h3>Church Ceremony – GMC Kimihurura</h3>
+      <p class="sub-event">2:00 PM</p>
     </div>
-  </section>
+
+    <!-- Box 3: Reception -->
+    <div class="venue-box">
+      <h3>Reception</h3>
+      <p class="sub-event">5:00 PM</p>
+      <p class="description">Cocktail hour begins at 5:00 PM, with dinner served at 6:30 PM.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- RSVP -->
   <section id="rsvp" class="rsvp-section">
