@@ -4,9 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rebecca & Paul Wedding</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/ring.jpg" type="image/x-icon">  
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -15,16 +18,22 @@
       color: white;
       line-height: 1.6;
       overflow-x: hidden;
+      position: relative;
     }
+
     a { text-decoration: none; color: white; }
     img { max-width: 100%; display: block; }
 
-    /* Navigation */
     .top-nav {
-      position: fixed; top: 0; width: 100%;
-      background: rgba(0,0,0,0.7); display: flex;
-      justify-content: center; padding: 15px 0; z-index: 1000;
+      position: fixed; 
+      top: 0; 
+      width: 100%;
+      display: flex;
+      justify-content: center; 
+      padding: 15px 0; 
+      z-index: 1000;
     }
+
     .top-nav a {
       margin: 0 20px; font-weight: 500;
     }
@@ -32,39 +41,43 @@
     /* Hero Section */
     .hero {
       background: url('images/pic5.JPG') center/cover fixed;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
-      padding: 100px 20px 40px;
+      padding: 120px 20px 40px;
     }
+
     .hero::before {
       content: ""; position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(0,0,0,0.7); z-index: 1;
     }
+
     .hero * { position: relative; z-index: 2; }
+
     .hero h1 {
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
+
     .hero p {
       font-size: 1.2rem;
       color: #e74c3c;
       margin-bottom: 20px;
     }
 
-    /* Countdown Boxes */
     #hero-countdown {
       display: flex;
       gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .count-box {
       background: rgba(255,255,255,0.1);
       padding: 15px 20px;
@@ -72,18 +85,19 @@
       text-align: center;
       min-width: 80px;
     }
+
     .count-box span {
       font-size: 1.8rem;
       font-weight: bold;
       color: #e74c3c;
     }
+
     .count-box small {
       display: block;
       font-size: 0.9rem;
       color: #fff;
     }
 
-    /* Styled Button */
     .styled-btn {
       background-color: salmon;
       color: white;
@@ -93,9 +107,9 @@
       font-weight: bold;
       cursor: pointer;
       display: inline-block;
-      text-decoration: none;
       margin-top: 20px;
     }
+
     .styled-btn:hover {
       background-color: #e06a6a;
     }
@@ -103,206 +117,324 @@
     .section-title {
       text-align: center;
       font-size: 2.5rem;
-      margin: 60px 0 30px;
+      margin-bottom: 30px;
       color: white;
+      position: relative;
     }
 
-    /* Couple Section */
+    .section-title ion-icon {
+      display: block;
+      font-size: 2rem;
+      color: #e74c3c;
+      margin-bottom: 5px;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 2px;
+      background: #e74c3c;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .story-section {
       background: url('images/pic5.JPG') center/cover fixed;
-      position: relative; min-height: 100vh;
-      padding: 4rem 2rem; text-align: center;
-    }
-    .story-section::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1;
-    }
-    .story-section * { position: relative; z-index: 2; }
-    .parts {
-      display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;
-    }
-    .part {
-      flex: 1 1 300px; max-width: 400px;
-      background: rgba(255,255,255,0.05);
-      padding: 20px; border-radius: 8px;
-    }
-
-    /* Gallery */
-    .gallery {
-      background: url('images/pic5.JPG') center/cover fixed;
-      padding: 60px 20px; text-align: center; min-height: 100vh;
       position: relative;
-    }
-    .gallery::before {
-      content: ""; position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6); z-index: 1;
-    }
-    .gallery * { position: relative; z-index: 2; }
-    .images-grid {
-      display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;
-      margin-top: 2rem;
-    }
-    .image-overlay-wrapper {
-      position: relative; overflow: hidden; border-radius: 8px;
-      cursor: pointer; flex: 1 1 30%; max-width: 30%;
-    }
-    .image-overlay-wrapper img {
-      width: 100%; transition: transform 0.3s ease;
-    }
-    .image-overlay-wrapper:hover img { transform: scale(1.05); }
-    .image-overlay-text {
-      position: absolute; bottom: 0; left: 0; width: 100%;
-      background: rgba(0,0,0,0.6); color: #fff;
-      padding: 10px; font-size: 1rem; text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .images-grid, .parts { flex-direction: column; align-items: center; }
-      .image-overlay-wrapper { max-width: 100%; }
-    }
-
-.venue-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.venue-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.venue-box {
-  flex: 1 1 250px;
-  max-width: 300px;
-  background: #fafafa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.venue-box h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.25em;
-  color: #333;
-}
-
-.venue-box a {
-  display: inline-block;
-  margin: 10px 0;
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.venue-box a:hover {
-  text-decoration: underline;
-}
-
-.sub-event {
-  margin-top: 12px;
-  font-style: italic;
-  color: #555;
-  font-size: 0.95em;
-}
-
-
-    /* RSVP Section */
-    .rsvp-section {
-      background: url('images/pic5.JPG') center/cover fixed;
-      padding: 60px 20px;
-      position: relative;
+      padding: 4rem 2rem;
       text-align: center;
     }
+
+    .story-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 1;
+    }
+
+    .story-section * { position: relative; z-index: 2; }
+
+    .parts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .part {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .gallery {
+      background: url('images/pic5.JPG') center/cover fixed;
+      position: relative;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .gallery::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .gallery * { position: relative; z-index: 2; }
+
+    .images-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 2rem;
+    }
+
+    .image-overlay-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      flex: 1 1 30%;
+      max-width: 30%;
+    }
+
+    .image-overlay-wrapper img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .image-overlay-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-overlay-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* ✅ Mobile Responsive Fix */
+    @media (max-width: 768px) {
+      .parts {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images-grid {
+        flex-direction: column;
+      }
+
+      .image-overlay-wrapper {
+        max-width: 100%;
+      }
+    }
+    /* --- VENUE SECTION --- */
+    .venue-section {
+      background: url('./images/pic5.JPG') center/cover fixed;
+      position: relative;
+      padding: 60px 20px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .venue-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .venue-section * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .venue, .venue-side-1, .venue-side-2 {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid salmon;
+      padding: 30px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .venue h2, .venue-side h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .venue p, .venue-side p, .venue-side span {
+      color: #fafafa;
+    }
+
+    .venue-side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .venue button {
+      padding: 12px 20px;
+      background-color: salmon;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .event-list {
+      list-style: none;
+      padding: 0;
+      color: #fafafa;
+    }
+
+    /* --- RSVP SECTION --- */
+    .rsvp-section {
+      background: url('images/pic5.JPG') center/cover fixed;
+      position: relative;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
     .rsvp-section::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6); z-index: 1;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
     }
-    .rsvp-section * { position: relative; z-index: 2; }
 
-    /* Video */
+    .rsvp-section * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .rsvp-section button {
+      background: salmon;
+      padding: 12px 24px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+/* Video */
     .video-wrapper {
       margin: 40px auto; max-width: 900px;
     }
     .video-wrapper video {
-      width: 100%; height: auto; border-radius: 10px;
+      width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
-    /* Footer */
+
     .footer {
       background: url('images/pic5.JPG') center/cover fixed;
-      padding: 40px 20px; text-align: center;
       position: relative;
+      padding: 40px 20px;
+      text-align: center;
     }
+
     .footer::before {
-      content: ""; position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6); z-index: 1;
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
     }
-    .footer * { position: relative; z-index: 2; }
-.floating-names {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: salmon;
-  color: white;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 10px 18px;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 10000;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards, float 3s ease-in-out infinite;
-  white-space: nowrap; /* keeps it from breaking into multiple lines */
-  max-width: max-content;
-}
 
-/* Float animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
+    .footer * {
+      position: relative;
+      z-index: 2;
+    }
 
-/* Fade in animation */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+    .footer p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
 
-/* Hover effect */
-.floating-names:hover {
-  transform: scale(1.05);
-  cursor: default;
-}
+    .floating-names {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: salmon;
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 18px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 10000;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards, float 3s ease-in-out infinite;
+      white-space: nowrap;
+      max-width: max-content;
+    }
 
-/* Responsive fix */
-@media (max-width: 480px) {
-  .floating-names {
-    font-size: 0.85rem;
-    padding: 8px 14px;
-  }
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
 
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
 
+    .floating-names:hover {
+      transform: scale(1.05);
+      cursor: default;
+    }
 
+    @media (max-width: 480px) {
+      .floating-names {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+      }
+
+      .venue-section {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 40px;
+      }
+
+      .venue, .venue-side {
+        width: 100%;
+      }
+    }
   </style>
 </head>
-<body>
 
-  <!-- Navigation -->
+<body>
   <nav class="top-nav">
     <a href="#couple">Couple</a>
     <a href="#gallery">Gallery</a>
@@ -310,119 +442,117 @@
     <a href="#rsvp">RSVP</a>
   </nav>
 
-  <!-- Hero -->
   <header class="hero">
-    <h1>REBECCA & PAUL</h1>
-    <p>ARE GETTING MARRIED</p>
+    <h1>B.REBECCA & H.PAUL(Godwin)</h1>
+    <p>WE ARE GETTING MARRIED</p>
     <p>January 4, 2026</p>
-
     <div id="hero-countdown">
       <div class="count-box"><span id="DAYS">00</span><small>DAYS</small></div>
       <div class="count-box"><span id="HOURS">00</span><small>HOURS</small></div>
       <div class="count-box"><span id="MINUTES">00</span><small>MINUTES</small></div>
       <div class="count-box"><span id="SECONDS">00</span><small>SECONDS</small></div>
     </div>
-
-    <a href="https://discord.com/invite/YOUR_INVITE_CODE" target="_blank" class="styled-btn"> Discover our story </a>
+    <a href="#couple" class="styled-btn">Discover our story</a>
   </header>
 
-  <!-- Couple Section -->
-  <section id="couple" class="story-section">
-    <h2 class="section-title">Our Story</h2>
+  <section class="story-section" id="couple">
+    <h1 class="section-title"><ion-icon name="heart-sharp"></ion-icon>HAPPY COUPLE</h1>
     <div class="parts">
-      <div class="part"><h3>Rebecca</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-      <div class="part"><h3>Paul</h3><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+      <div class="part">
+        <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Our Story</h2>
+        <p>Our love story is very long. Just visit us and we will tell you. We know you'll enjoy hearing it and maybe you'll learn something from it.</p>
+      </div>
+      <div class="part">
+        <img src="images/image 13.jpg" alt="Story Photo">
+      </div>
     </div>
   </section>
 
-
-
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <h2 class="section-title">Gallery</h2>
+  <section class="gallery" id="gallery">
+    <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Our Journey Together</h2>
+    <p>Here are some of our cherished moments:</p>
     <div class="images-grid">
-      <div class="image-overlay-wrapper">
-        <img src="images/pic1.JPG" alt="Gallery 1">
-        <div class="image-overlay-text">Our First Date</div>
+      <div class="image-overlay-wrapper" onclick="alert('Radiant Beauty')">
+        <img src="images/image4.jpg" alt="Wedding photo 1">
+        <div class="image-overlay-text">Radiant Beauty</div>
       </div>
-      <div class="image-overlay-wrapper">
-        <img src="images/pic2.JPG" alt="Gallery 2">
-        <div class="image-overlay-text">Proposal</div>
+      <div class="image-overlay-wrapper" onclick="alert('Dancing Through Life')">
+        <img src="images/IMGL0918.jpg" alt="Wedding photo 2">
+        <div class="image-overlay-text">Dancing Through Life</div>
       </div>
-      <div class="image-overlay-wrapper">
-        <img src="images/pic3.JPG" alt="Gallery 3">
-        <div class="image-overlay-text">Vacation</div>
+      <div class="image-overlay-wrapper" onclick="alert('Always Love Wins')">
+        <img src="images/pic6.jpg" alt="Wedding photo 3">
+        <div class="image-overlay-text">Always Love Wins</div>
       </div>
     </div>
   </section>
 
- <section id="venue" class="venue-section">
-  <h2>Venue</h2>
-  <div class="venue-grid">
-    <!-- Box 1: Madeleine Garden & Map + Dowry Giving -->
-    <div class="venue-box">
-      <h3>Madeleine Garden</h3>
+  <section class="venue-section" id="venue">
+    <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Ceremony Schedule</h2>
+    <div class="venue">
+      <h2><u>Madeleine Garden</u></h2>
       <p>KG 9 Ave, Kigali, Rwanda</p>
-      <a class="map-link" href="https://maps.app.goo.gl" target="_blank" rel="noopener">View on Google Maps</a>
-      <p class="sub-event">Introduction &amp; Dowry Giving – 10:00 AM</p>
+      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View in Google Maps</button></a>
     </div>
-
-    <!-- Box 2: Church Ceremony -->
-    <div class="venue-box">
-      <h3>Church Ceremony – GMC Kimihurura</h3>
-      <p class="sub-event">2:00 PM</p>
-    </div>
-
-    <!-- Box 3: Reception -->
-    <div class="venue-box">
-      <h3>Reception</h3>
-      <p class="sub-event">5:00 PM</p>
-      <p class="description">Cocktail hour begins at 5:00 PM, with dinner served at 6:30 PM.</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- RSVP -->
-  <section id="rsvp" class="rsvp-section">
-    <h2 class="section-title">RSVP</h2>
-    <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank" class="styled-btn">RSVP Now</a>
+    <div class="venue-side">
+      <div class="venue-side-1">
+        <h2><u>Avenue</u></h2>
+        <ul class="event-list">
+          <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
+          <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
+          <li><strong>Reception:</strong> 5:00 PM</li>
+        </ul>
+      </div>
+      
   </section>
 
-  <!-- Video -->
-  <div class="video-wrapper">
-    <video src="images/video.mp4" controls autoplay muted loop></video>
-  </div>
+  <section class="rsvp-section" id="rsvp">
+    <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>We Can’t Wait to Celebrate With You!</h2>
+    <p>Registering ends December 31, 2025</p>
+    <a href="https://forms.gle/yPymkTkSZKAFnYXn7" target="_blank"><button>Register</button></a>
+    
+  </section>
+  <video autoplay muted loop playsinline>
+  <source src="images/paulreb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-  <!-- Footer -->
+
   <footer class="footer">
-    <p>Made with ❤️ by Rebecca & Paul</p>
+    <footer class="footer">
+  <h1>Rebecca & Paul – January 4, 2026</h1>
+  <p>Developed with ❤️ by <strong>Sonia Uwitonze</strong></p>
+</footer>
+
   </footer>
 
-  <!-- Countdown Script -->
+  <div class="floating-names">Rebecca & Paul</div>
+
   <script>
-    const targetDate = new Date("January 4, 2026 00:00:00").getTime();
-    function updateCountdown() {
+    const weddingDate = new Date("2026-01-04T00:00:00").getTime();
+    const countdownInterval = setInterval(() => {
       const now = new Date().getTime();
-      const diff = targetDate - now;
-      if (diff < 0) return;
-      document.getElementById("DAYS").textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById("HOURS").textContent = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      document.getElementById("MINUTES").textContent = Math.floor((diff / (1000 * 60)) % 60);
-      document.getElementById("SECONDS").textContent = Math.floor((diff / 1000) % 60);
-    }
-    setInterval(updateCountdown, 1000);
+      const timeLeft = weddingDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("DAYS").textContent = days;
+      document.getElementById("HOURS").textContent = hours;
+      document.getElementById("MINUTES").textContent = minutes;
+      document.getElementById("SECONDS").textContent = seconds;
+
+      if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("hero-countdown").innerHTML = "We're Married!";
+      }
+    }, 1000);
   </script>
-<!-- Other content like RSVP, Video, Footer etc -->
-
-<!-- Floating Couple Names -->
-<div class="floating-names">❤️ Rebecca & Paul</div>
-
 </body>
 </html>
 
-</body>
-</html>
 
 
 
