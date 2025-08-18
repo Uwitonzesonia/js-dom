@@ -32,6 +32,7 @@
       justify-content: center; 
       padding: 15px 0; 
       z-index: 1000;
+      background: rgba(0,0,0,0.7);
     }
 
     .top-nav a {
@@ -40,7 +41,7 @@
 
     /* Hero Section */
     .hero {
-      background: url('images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -141,7 +142,7 @@
     }
 
     .story-section {
-      background: url('images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       position: relative;
       padding: 4rem 2rem;
       text-align: center;
@@ -175,7 +176,7 @@
     }
 
     .gallery {
-      background: url('images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       position: relative;
       padding: 60px 20px;
       text-align: center;
@@ -244,9 +245,10 @@
         max-width: 100%;
       }
     }
+
     /* --- VENUE SECTION --- */
     .venue-section {
-      background: url('./images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       position: relative;
       padding: 60px 20px;
       color: white;
@@ -270,7 +272,7 @@
       z-index: 2;
     }
 
-    .venue, .venue-side-1, .venue-side-2 {
+    .venue, .venue-side-1 {
       background-color: rgba(0, 0, 0, 0.7);
       border: 2px solid salmon;
       padding: 30px;
@@ -279,20 +281,13 @@
       min-width: 280px;
     }
 
-    .venue h2, .venue-side h2 {
+    .venue h2 {
       color: white;
       margin-bottom: 10px;
     }
 
-    .venue p, .venue-side p, .venue-side span {
+    .venue p, .venue-side-1 p, .venue-side-1 span {
       color: #fafafa;
-    }
-
-    .venue-side {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex: 1;
     }
 
     .venue button {
@@ -314,7 +309,7 @@
 
     /* --- RSVP SECTION --- */
     .rsvp-section {
-      background: url('images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       position: relative;
       padding: 60px 20px;
       text-align: center;
@@ -346,17 +341,16 @@
       border-radius: 5px;
     }
 
-/* Video */
+    /* Video */
     .video-wrapper {
-      margin: 40px auto; max-width: 900px;
+      margin: 40px auto; max-width: 900px; padding: 0 10px;
     }
     .video-wrapper video {
       width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
-
     .footer {
-      background: url('images/pic5.JPG') center/cover fixed;
+      background: url('images/pic5.JPG') center/cover;
       position: relative;
       padding: 40px 20px;
       text-align: center;
@@ -414,21 +408,40 @@
       cursor: default;
     }
 
-    @media (max-width: 480px) {
+    /* ========== MOBILE STYLES ========== */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+
+      .count-box { min-width: 60px; padding: 10px; }
+      .count-box span { font-size: 1.5rem; }
+      .count-box small { font-size: 0.75rem; }
+
+      .parts { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .part { max-width: 100%; }
+
+      .images-grid { flex-direction: column; gap: 20px; }
+      .image-overlay-wrapper { max-width: 100%; }
+
+      .venue-section { flex-direction: column; align-items: center; }
+      .venue, .venue-side-1 { width: 100%; margin-bottom: 20px; }
+
+      .section-title { font-size: 1.8rem; }
+      .styled-btn, .venue button, .rsvp-section button { font-size: 1rem; padding: 10px 20px; }
+
+      .video-wrapper { width: 100%; padding: 0 10px; }
+      video { width: 100%; border-radius: 8px; }
+
+      .top-nav { flex-wrap: wrap; padding: 10px 5px; justify-content: center; background: rgba(0,0,0,0.8); }
+      .top-nav a { margin: 5px 10px; font-size: 0.9rem; }
+
       .floating-names {
-        font-size: 0.85rem;
-        padding: 8px 14px;
-      }
-
-      .venue-section {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding-bottom: 40px;
-      }
-
-      .venue, .venue-side {
-        width: 100%;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        bottom: 15px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -456,7 +469,7 @@
   </header>
 
   <section class="story-section" id="couple">
-    <h1 class="section-title"><ion-icon name="heart-sharp"></ion-icon>HAPPY COUPLE</h1>
+    <h1 class="section-title"><ion-icon name="heart-sharp"></ion-icon> OUR COUPLE</h1>
     <div class="parts">
       <div class="part">
         <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>Our Story</h2>
@@ -480,9 +493,9 @@
         <img src="images/IMGL0918.jpg" alt="Wedding photo 2">
         <div class="image-overlay-text">Dancing Through Life</div>
       </div>
-      <div class="image-overlay-wrapper" onclick="alert('Always Love Wins')">
+      <div class="image-overlay-wrapper" onclick="alert('Always Love Win')">
         <img src="images/pic6.jpg" alt="Wedding photo 3">
-        <div class="image-overlay-text">Always Love Wins</div>
+        <div class="image-overlay-text">Always Love Win</div>
       </div>
     </div>
   </section>
@@ -492,66 +505,71 @@
     <div class="venue">
       <h2><u>Madeleine Garden</u></h2>
       <p>KG 9 Ave, Kigali, Rwanda</p>
-      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View in Google Maps</button></a>
+      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View on Google Maps</button></a>
     </div>
-    <div class="venue-side">
-      <div class="venue-side-1">
-        <h2><u>Avenue</u></h2>
-        <ul class="event-list">
-          <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
-          <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
-          <li><strong>Reception:</strong> 5:00 PM</li>
-        </ul>
-      </div>
-      
+    <div class="venue-side-1">
+      <h2><u>Schedule</u></h2>
+      <ul class="event-list">
+        <li><strong>Introduction & Dowry:</strong> 10:00 AM</li>
+        <li><strong>Wedding Ceremony:</strong> 2:00 PM</li>
+        <li><strong>Reception:</strong> 5:00 PM</li>
+      </ul>
+    </div>
   </section>
 
   <section class="rsvp-section" id="rsvp">
     <h2 class="section-title"><ion-icon name="heart-sharp"></ion-icon>We Can’t Wait to Celebrate With You!</h2>
-    <p>Registering ends December 31, 2025</p>
+    <p>Registration ends by December 31, 2025</p>
     <a href="https://forms.gle/yPymkTkSZKAFnYXn7" target="_blank"><button>Register</button></a>
-    
   </section>
-  <video autoplay muted loop playsinline>
-  <source src="images/paulreb.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline>
+      <source src="images/paulreb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <footer class="footer">
-    <footer class="footer">
-  <h1>Rebecca & Paul – January 4, 2026</h1>
-  <p>Developed with ❤️ by <strong>Sonia Uwitonze</strong></p>
-</footer>
-
+    <h1>2026 January 4 @ rebbeca-paul</h1>
+    <p>Developed by <strong>Sonia Uwitonze</strong></p>
   </footer>
 
-  <div class="floating-names">Rebecca & Paul</div>
+  <div class="floating-names"> Rebecca & Paul</div>
 
   <script>
-    const weddingDate = new Date("2026-01-04T00:00:00").getTime();
-    const countdownInterval = setInterval(() => {
-      const now = new Date().getTime();
-      const timeLeft = weddingDate - now;
+document.addEventListener("DOMContentLoaded", () => {
+  const weddingDate = new Date("January 4, 2026 00:00:00").getTime();
 
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = weddingDate - now;
 
-      document.getElementById("DAYS").textContent = days;
-      document.getElementById("HOURS").textContent = hours;
-      document.getElementById("MINUTES").textContent = minutes;
-      document.getElementById("SECONDS").textContent = seconds;
+    if (timeLeft <= 0) {
+      document.getElementById("hero-countdown").innerHTML = "🎉 We're Married!";
+      clearInterval(countdownInterval);
+      return;
+    }
 
-      if (timeLeft < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById("hero-countdown").innerHTML = "We're Married!";
-      }
-    }, 1000);
-  </script>
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("DAYS").textContent = days;
+    document.getElementById("HOURS").textContent = hours;
+    document.getElementById("MINUTES").textContent = minutes;
+    document.getElementById("SECONDS").textContent = seconds;
+  }
+
+  updateCountdown();
+  const countdownInterval = setInterval(updateCountdown, 1000);
+});
+</script>
+
 </body>
 </html>
+
 
 
 
