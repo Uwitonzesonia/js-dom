@@ -1,5 +1,13 @@
-  const person = { name: "Alice", age: 30 };
-    const { name, age } = person;
-   const { name: personName, age: personAge } = person;
-    console.log(personName);
-    console.log(personAge);
+ const first ={name: "kanez"};
+
+ const second={job: "developer"};
+ const combined= {...first, ...second, loaction: "Rwanda"};
+ console.log(combined);
+
+  
+  
+
+
+ 
+
+ 
