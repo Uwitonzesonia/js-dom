@@ -1,23 +1,11 @@
-console.log("introduction to promises");
-let  getWater = new Promise(function(resolve, reject){
-       setTimeout(function(){
-        reject(new Error("no water available"))
-       }, 2000); 
-       
-    });
+console.log("3.callback");
+function foo(bar) {
+    bar();
+}
 
-
-const grandparentscooking = () => {
-
-    getWater.catch(function(Error){
-
-    console.log(`OMG${Error.message}`);
-
+foo(function () {
+    console.log("bar");
 })
-
-};
-grandparentscooking();
-
 
 
 
