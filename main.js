@@ -1,14 +1,17 @@
+console.log("introduction to promises");
 let  getWater = new Promise(function(resolve, reject){
-    // Got the water 
-let value ="water";
-resolve(value);
-});
+       setTimeout(function(){
+        reject(new Error("no water available"))
+       }, 2000); 
+       
+    });
+
 
 const grandparentscooking = () => {
 
-    getWater.then(function(result){
+    getWater.catch(function(Error){
 
-    console.log(`cooking with ${result}`)
+    console.log(`OMG${Error.message}`);
 
 })
 
