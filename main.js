@@ -1,26 +1,22 @@
-console.log("3.callback");
-function foo(bar) {
-    bar();
+function add(a,b){
+    return a+b;
+}
+function multiply(num){
+    return num*2;
+}
+function subtract(num){
+    return num - 5;
 }
 
-foo(function () {
-    console.log("bar");
-})
-
-orderPizza('veg','cheesebarbeque',function(msg){
-    console.log(msg);
-});
-function orderPizza(type, name, callback) {
-    console.log(`pizza ${type} ${name} is ordered`);
-
-    setTimeout(function() {
-        const msg = `pizza ${type} ${name} is ready`
-       callback(msg);
-    },3000);
-} 
-
-
-
+function main() {
+    const sum = add(5,10);
+    console.log("sum:",sum);
+    const product = multiply(sum);
+    console.log("product:",product);
+    const result = subtract(product);
+    console.log("result:",result);
+}
+main();
 
  
 
