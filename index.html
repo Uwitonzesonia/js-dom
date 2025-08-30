@@ -214,11 +214,26 @@
     .image-overlay-wrapper img {
       width: 100%;
       transition: transform 0.3s ease;
+      -webkit-user-drag: none; 
+       user-drag: none;
+       pointer-events: none; 
     }
 
     .image-overlay-wrapper:hover img {
       transform: scale(1.05);
     }
+    .watermark {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+}
 
     .image-overlay-text {
       position: absolute;
@@ -564,6 +579,7 @@
       </div>
       <div class="part">
         <img src="images/image 13.jpg" alt="Story Photo">
+        <div class="watermark"></div>
       </div>
     </div>
   </section>
@@ -575,14 +591,17 @@
       <div class="image-overlay-wrapper" onclick="alert('Radiant Beauty')">
         <img src="images/image4.jpg" alt="Wedding photo 1">
         <div class="image-overlay-text">Radiant Beauty</div>
+        <div class="watermark"></div>
       </div>
       <div class="image-overlay-wrapper" onclick="alert('Dancing Through Life')">
         <img src="images/IMGL0918.jpg" alt="Wedding photo 2">
         <div class="image-overlay-text">Dancing Through Life</div>
+        <div class="watermark"></div>
       </div>
       <div class="image-overlay-wrapper" onclick="alert('Always Love Win')">
         <img src="images/pic6.jpg" alt="Wedding photo 3">
         <div class="image-overlay-text">Always Love Win</div>
+        <div class="watermark"></div>
       </div>
     </div>
   </section>
@@ -652,6 +671,15 @@
     }, 1000);
    
   </script>
+  <script>
+  // Disable right click kuri page yose
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+  // Disable drag
+  document.addEventListener("dragstart", (e) => e.preventDefault());
+</script>
+
+
    <div class="floating-names"> Rebecca & Paul</div>
 </body>
 </html>
