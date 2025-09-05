@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="images/ring.jpg" type="image/x-icon">  
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -541,8 +542,8 @@
   .floating-names {
     font-size: 0.75rem;
     padding: 6px 10px;
-    top: 10px;
-    left: 10px;
+    top: 38px;
+    left: 1px;
   }
 }
 
@@ -550,14 +551,16 @@
 </head>
 
 <body>
+  <div class="floating-names"> Rebecca & Paul</div>
   <nav class="top-nav">
+    <a href="#Home">Home</a>
     <a href="#couple">Couple</a>
     <a href="#gallery">Gallery</a>
     <a href="#venue">Venue</a>
     <a href="#rsvp">RSVP</a>
   </nav>
 
-  <header class="hero">
+  <header class="hero" id="Home">
     <h3>B.REBECCA & H.PAUL(Godwin)</h3>
     <p>WE ARE GETTING MARRIED</p>
     <p>January 4, 2026</p>
@@ -567,14 +570,16 @@
       <div class="count-box"><span id="MINUTES">00</span><small>MINUTES</small></div>
       <div class="count-box"><span id="SECONDS">00</span><small>SECONDS</small></div>
     </div>
+
     <a href="#couple" class="styled-btn">Discover our story</a>
   </header>
+     
 
   <section class="story-section" id="couple">
-    <h2 class="section-title"><ion-icon name="sharp"></ion-icon> OURCOUPLE</h2>
+    <h2 class="section-title"><ion-icon name="sharp"></ion-icon> OUR COUPLE</h2>
     <div class="parts">
       <div class="part">
-        <h3 >Our Story !!!</h3>
+        <h2 >Our Story !!!</h2>
         <p>Our love story is very long. Just visit us and we will tell you. We know you'll enjoy hearing it and maybe you'll learn something from it.</p>
       </div>
       <div class="part">
@@ -608,11 +613,7 @@
 
   <section class="venue-section" id="venue">
     <h2 class="section-title"><ion-icon name="sharp"></ion-icon>Ceremony Schedule</h2>
-    <div class="venue">
-      <h2><u>Madeleine Garden</u></h2>
-      <p>KG 9 Ave, Kigali, Rwanda</p>
-      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View on Google Maps</button></a>
-    </div>
+    
     <div class="venue-side">
       <div class="venue-side-1">
         <h2><u>Avenue</u></h2>
@@ -622,6 +623,11 @@
           <li><strong>Reception:</strong> 5:00 PM</li>
         </ul>
       </div>
+      <div class="venue">
+      <h2><u>Madeleine Garden</u></h2>
+      <p>KG 9 Ave, Kigali, Rwanda</p>
+      <a href="https://maps.app.goo.gl/mPoVi5Q6vVQUY8wPA" target="_blank"><button>View on Google Maps</button></a>
+    </div>
       </div>
       
   </section>
@@ -629,7 +635,7 @@
   <section class="rsvp-section" id="rsvp">
     <h2 class="section-title"><ion-icon name="sharp"></ion-icon>We Can’t Wait to Celebrate With You!</h2>
     <p>Registration ends by December 31, 2025</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScRm_6csgTHMqwi5qH7xCHACLkQ3rZ5CVlrMbkZOuHGLucwXA/viewform?usp=sharing&ouid=117856802442837099732" target="_blank"><button>Register</button></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScRm_6csgTHMqwi5qH7xCHACLkQ3rZ5CVlrMbkZOuHGLucwXA/viewform?usp=sharing&ouid=117856802442837099732" target="_blank"><button>Register Here</button></a>
     
   </section>
   <video autoplay muted loop playsinline>
@@ -680,7 +686,7 @@
 </script>
 
 
-   <div class="floating-names"> Rebecca & Paul</div>
+ 
 </body>
 </html>
 
