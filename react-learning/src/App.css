@@ -1,8 +1,44 @@
-.red-text {
-    color: red;
+const styles  {
+  container {
+    textAlign: "center",
+    marginTop: "50px",
+    fontFamily: "Arial, sans-serif",
   }
-  h2 {
-    font-family: Lobster, Monospace;
+  title {
+    font-size: "2rem",
+    marginBottom"20px",
+
   }
+  number {
+    font-size: "3rem",
+    fontWeight "bold",
+    margin "20px 0",
+  }
+  buttonContainer {
+    display: "flex",
+    justifyContent "center",
+gap "15px",
+  }
+  buttonAdd {
+    padding: "10px 20px",
+    fontSize "1rem",
+    backgroundColor "#4CAF50",
+    textColor: "white",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+  }
+  buttonSubtract {
+    padding: "10px 20px",
+    fontSize "1rem",
+    backgroundColor "#f44336",
+    textColor: "white",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+  }
+}
+
+
 
 
