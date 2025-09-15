@@ -176,92 +176,76 @@
       padding: 20px;
       border-radius: 8px;
     }
-
+    
     .gallery {
-      background: url('images/pic5.JPG') center/cover fixed;
-      position: relative;
-      padding: 60px 20px;
-      text-align: center;
-    }
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
 
-    .gallery::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 1;
-    }
-
-    .gallery  { position: relative; z-index: 2; }
-
-    .images-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 2rem;
-    }
-
-    .image-overlay-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      cursor: pointer;
-      flex: 1 1 30%;
-      max-width: 30%;
-    }
-
-    .image-overlay-wrapper img {
-      width: 100%;
-      transition: transform 0.3s ease;
-      -webkit-user-drag: none; 
-       user-drag: none;
-       pointer-events: none; 
-    }
-
-    .image-overlay-wrapper:hover img {
-      transform: scale(1.05);
-    }
-    .watermark {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 14px;
-  border-radius: 4px;
-  font-family: Arial, sans-serif;
-  z-index: 2;
+  /* 🔑 Wallpaper background */
+  background: url('./images/pic5.JPG') center/cover fixed;
 }
 
-    .image-overlay-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
 
-    /* ✅ Mobile Responsive Fix */
-    @media (max-width: 768px) {
-      .parts {
-        flex-direction: column;
-        align-items: center;
-      }
+  /* 🔑 Igihu cya overlay gupfuka background gusa */
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
 
-      .images-grid {
-        flex-direction: column;
-      }
+.gallery * {
+  position: relative;
+  z-index: 1; /* 🔑 Amafoto n’andi texts agaragara hejuru */
+}
+.images-grid {
+  display: flex;
+  justify-content: center;   /* Amafoto ashyirwe hagati */
+  align-items: flex-start;
+  gap: 20px;                 /* Umwanya hagati y’amafoto */
+  flex-wrap: wrap;           /* Kuri mobile azajya akurikirana */
+  margin-top: 2rem;
+}
 
-      .image-overlay-wrapper {
-        max-width: 100%;
-      }
-    }
+.image-overlay-wrapper {
+  flex: 1 1 calc(33.333% - 20px); /* 3 ku murongo umwe */
+  max-width: 30%;                 /* Nta na rimwe rizarenza 30% */
+  min-width: 250px;               /* Kuri mobile rizagwa hasi */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-overlay-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-overlay-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  width: auto;
+  max-width: 90%;
+}
+
     /* --- VENUE SECTION --- */
     .venue-section {
       background: url('./images/pic5.JPG') center/cover fixed;
@@ -547,6 +531,8 @@
   }
 }
 
+
+
   </style>
 </head>
 
@@ -588,28 +574,32 @@
       </div>
     </div>
   </section>
+<section class="gallery" id="gallery">
+  <h2 class="section-title">
+    <ion-icon name="images-outline"></ion-icon>Our Journey Together
+  </h2>
+  <h3>Here are some of our cherished moments:</h3>
 
-  <section class="gallery" id="gallery">
-    <h2 class="section-title"><ion-icon name="sharp"></ion-icon>Our Journey Together</h2>
-    <p>Here are some of our cherished moments:</p>
-    <div class="images-grid">
-      <div class="image-overlay-wrapper" onclick="alert('Radiant Beauty')">
-        <img src="images/image4.jpg" alt="Wedding photo 1">
-        <div class="image-overlay-text">Radiant Beauty</div>
-        <div class="watermark"></div>
-      </div>
-      <div class="image-overlay-wrapper" onclick="alert('Dancing Through Life')">
-        <img src="images/IMGL0918.jpg" alt="Wedding photo 2">
-        <div class="image-overlay-text">Dancing Through Life</div>
-        <div class="watermark"></div>
-      </div>
-      <div class="image-overlay-wrapper" onclick="alert('Always Love Win')">
-        <img src="images/pic6.jpg" alt="Wedding photo 3">
-        <div class="image-overlay-text">Always Love Win</div>
-        <div class="watermark"></div>
-      </div>
+  <div class="images-grid">
+    <div class="image-overlay-wrapper">
+      <img src="./images/image4.jpg" alt="Radiant Beauty">
+      <div class="overlay-text">Radiant Beauty</div>
     </div>
-  </section>
+
+    <div class="image-overlay-wrapper">
+      <img src="./images/imgl0918.jpg" alt="Dancing Through Life">
+      <div class="overlay-text">Dancing Through Life</div>
+    </div>
+
+    <div class="image-overlay-wrapper">
+      <img src="./images/pic6.jpg" alt="Always Love Win">
+      <div class="overlay-text">Always Love Win</div>
+    </div>
+  </div>
+</section>
+
+
+
 
   <section class="venue-section" id="venue">
     <h2 class="section-title"><ion-icon name="sharp"></ion-icon>Ceremony Schedule</h2>
@@ -648,8 +638,6 @@
   <h3>Paul & Rebecca . January 4 . 2026</h3>
   <p>Developed by <strong>Sonia Uwitonze</strong></p>
 </footer>
-
-  </footer>
 
   <div class="floating-names">Rebecca & Paul</div>
 
